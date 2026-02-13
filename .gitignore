@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+
+# Flask
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+
+# Mashup temporary directories
+downloads/
+audio/
+cut_audio/
+*.mp3
+*.mp4
+*.webm
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

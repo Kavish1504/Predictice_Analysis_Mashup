@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mashup Song Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body
+    class="h-lvh flex justify-center items-center flex-col font-sans bg-gray-100"
+  >
+    <h1 class="text-4xl font-bold p-3">Mashup Song Generator</h1>
+    <form
+      class="border m-7 p-6 flex flex-col w-lvh rounded-xl shadow-xl bg-white border-white"
+    >
+      <label class="text-xl text-gray-700 font-medium pl-3">Singer Name:</label>
+      <input
+        type="text"
+        name="singer"
+        id="singer"
+        placeholder="Enter Singer Name"
+        class="bg-gray-100 rounded-sm m-3 text-md border border-gray-200 font-semibold text-gray-900 py-2 px-4 outline-none"
+      />
+      <label class="text-xl text-gray-700 font-medium pl-3"
+        >No. of Videos:</label
+      >
+      <input
+        type="number"
+        name="videos"
+        id="videos"
+        placeholder="Enter no. of videos (10 or more)"
+        class="bg-gray-100 rounded-sm m-3 text-md border border-gray-200 font-semibold text-gray-900 py-2 px-4 outline-none"
+      />
+      <label class="text-xl text-gray-700 font-medium pl-3"
+        >Duration of each video:</label
+      >
+      <input
+        type="number"
+        name="duration"
+        id="duration"
+        placeholder="Enter length of each video (20 or more)"
+        class="bg-gray-100 rounded-sm m-3 text-md border border-gray-200 font-semibold text-gray-900 py-2 px-4 outline-none"
+      />
+      <label class="text-xl text-gray-700 font-medium pl-3">Email ID:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter your email id"
+        class="bg-gray-100 rounded-sm m-3 text-md border border-gray-200 font-semibold text-gray-900 py-2 px-4 outline-none"
+      />
+      <button
+        id="button"
+        type="submit"
+        class="relative outline-0 border-2 p-3 rounded-b-sm m-3 text-white text-xl bg-blue-600 font-medium hover:bg-blue-700 hover:cursor-pointer transition duration-150 active:opacity-70 flex items-center justify-center"
+      >
+        <span id="btn-text">Get Mashup</span>
+        <span id="spinner" class="hidden"></span>
+      </button>
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
